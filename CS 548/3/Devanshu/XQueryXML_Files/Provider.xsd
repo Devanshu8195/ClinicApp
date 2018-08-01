@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    vc:minVersion="1.1" targetNamespace="http://www.example.org/schemas/clinic/provider"
+    xmlns="http://www.example.org/schemas/clinic/provider"
+    xmlns:cids="http://www.example.org/schemas/clinic/clinic_ids"
+    xmlns:prov="http://www.example.org/schemas/clinic/provider">
+
+    <xs:import namespace="http://www.example.org/schemas/clinic/clinic_ids"
+        schemaLocation="ClinicIds.xsd"/>
+    <xs:complexType name="ProviderType">
+        <xs:sequence>
+            <xs:element name="provider-id" type="cids:ProviderIdType"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="specialization" type="prov:SpecializationType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="SpecializationType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Radiology"/>
+            <xs:enumeration value="Surgery"/>
+            <xs:enumeration value="Oncology"/>
+            <xs:enumeration value="Primary Care"/>
+            <xs:enumeration value="Osteopathy"/>
+            <xs:enumeration value="Internist"/>
+            <xs:enumeration value="Clinical Psychologist"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="provider" type="prov:ProviderType"/>
+</xs:schema>

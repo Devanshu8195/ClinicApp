@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    vc:minVersion="1.1" targetNamespace="http://www.example.org/schemas/clinic"
+    xmlns="http://www.example.org/schemas/clinic"
+    xmlns:pat="http://www.example.org/schemas/clinic/patient"
+    xmlns:prov="http://www.example.org/schemas/clinic/provider"
+    xmlns:trmt="http://www.example.org/schemas/clinic/treatment"
+    xmlns:tns="http://www.example.org/schemas/clinic">
+
+    <xs:import namespace="http://www.example.org/schemas/clinic/patient"
+        schemaLocation="Patient.xsd"/>
+    <xs:import namespace="http://www.example.org/schemas/clinic/provider"
+        schemaLocation="Provider.xsd"/>
+    <xs:import namespace="http://www.example.org/schemas/clinic/treatment"
+        schemaLocation="Treatment.xsd"/>
+    <xs:complexType name="ClinicType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="pat:patient"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="prov:provider"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Clinic" type="tns:ClinicType">
+        <xs:key name="ProviderPrimaryKey">
+            <xs:selector xpath="./prov:Provider"/>
+            <xs:field xpath="prov:provider-id"/>
+        </xs:key>
+        <xs:keyref name="TreatmentProviderForeignKey" refer="tns:ProviderPrimaryKey">
+            <xs:selector xpath="./pat:Patient/pat:treatments/pat:treatment"/>
+            <xs:field xpath="provider-id"/>
+        </xs:keyref>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application xmlns="http://wadl.dev.java.net/2009/02">
+    <doc xmlns:jersey="http://jersey.java.net/" jersey:generatedBy="Jersey: 2.25.1 2017-01-19 16:23:50"/>
+    <doc xmlns:jersey="http://jersey.java.net/" jersey:hint="This is simplified WADL with user and core resources only. To get full WADL with extended resources use the query parameter detail. Link: http://ec2-34-203-10-94.compute-1.amazonaws.com:8080/clinic-rest/resources/application.wadl?detail=true"/>
+    <grammars>
+        <include href="application.wadl/xsd2.xsd">
+            <doc title="Generated" xml:lang="en"/>
+        </include>
+        <include href="application.wadl/xsd0.xsd">
+            <doc title="Generated" xml:lang="en"/>
+        </include>
+        <include href="application.wadl/xsd1.xsd">
+            <doc title="Generated" xml:lang="en"/>
+        </include>
+    </grammars>
+    <resources base="http://ec2-34-203-10-94.compute-1.amazonaws.com:8080/clinic-rest/resources/">
+        <resource path="/provider">
+            <method id="addProvider" name="POST">
+                <request>
+                    <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="providerRepresentation" mediaType="application/xml"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="byNPI">
+                <method id="getProviderByProviderId" name="GET">
+                    <request>
+                        <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="id" style="query" type="xs:string"/>
+                    </request>
+                    <response>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="providerRepresentation" mediaType="application/xml"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="{id}/treatments/{tid}">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="id" style="template" type="xs:string"/>
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="tid" style="template" type="xs:string"/>
+                <method id="getProviderTreatment" name="GET">
+                    <response>
+                        <representation mediaType="application/xml"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="site">
+                <method id="getSiteInfo" name="GET">
+                    <response>
+                        <representation mediaType="text/plain"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="{id}/treatments">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="providerId" style="template" type="xs:string"/>
+                <method id="addTreatments" name="POST">
+                    <request>
+                        <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="X-Patient" style="header" type="xs:string"/>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="treatmentRepresentation" mediaType="application/xml"/>
+                    </request>
+                    <response>
+                        <representation mediaType="*/*"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="{id}">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="id" style="template" type="xs:string"/>
+                <method id="getProvider" name="GET">
+                    <response>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="providerRepresentation" mediaType="application/xml"/>
+                    </response>
+                </method>
+            </resource>
+        </resource>
+        <resource path="/patient">
+            <method id="addPatient" name="POST">
+                <request>
+                    <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="patientRepresentation" mediaType="application/xml"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{id}">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="id" style="template" type="xs:string"/>
+                <method id="getPatient" name="GET">
+                    <response>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="patientRepresentation" mediaType="application/xml"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="byPatientId">
+                <method id="getPatientByPatientId" name="GET">
+                    <request>
+                        <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="id" style="query" type="xs:string"/>
+                    </request>
+                    <response>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="patientRepresentation" mediaType="application/xml"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="{id}/treatments/{tid}">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="id" style="template" type="xs:string"/>
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="tid" style="template" type="xs:string"/>
+                <method id="getPatientTreatment" name="GET">
+                    <response>
+                        <representation mediaType="application/xml"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="site">
+                <method id="getSiteInfo" name="GET">
+                    <response>
+                        <representation mediaType="text/plain"/>
+                    </response>
+                </method>
+            </resource>
+        </resource>
+    </resources>
+</application>

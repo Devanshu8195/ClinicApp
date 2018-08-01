@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:clinic="http://edu.stevens.cs548/clinic#/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/Patient">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Clinic"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub484bL30C25">
+    <owl:inverseFunctionalProperty rdf:resource="http://edu.stevens.cs548/clinic#/Patient"/>
+    <owl:FunctionalProperty rdf:resource="http://edu.stevens.cs548/clinic#/Patient"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/Surgery">
+    <rdfs:subClassOf rdf:resource="http://edu.stevens.cs548/clinic#/Treatment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/RadiologistProvided">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="ub484bL36C25"/>
+    <rdfs:subClassOf rdf:resource="http://edu.stevens.cs548/clinic#/Treatment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/ProvidedBy">
+    <rdfs:domain rdf:resource="http://edu.stevens.cs548/clinic#/Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://edu.stevens.cs548/clinic#/Provider"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/RadiologyTreatment_First_Treatment">
+    <rdf:type rdf:resource="http://edu.stevens.cs548/clinic#/Radiology"/>
+    <clinic:ProvidedBy rdf:resource="http://edu.stevens.cs548/clinic#/dilip"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/RadiologyPatient">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="ub484bL42C25"/>
+    <rdfs:subClassOf rdf:resource="http://edu.stevens.cs548/clinic#/Patient"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub484bL42C25">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:HasValue rdf:resource="http://edu.stevens.cs548/clinic#/Radiology"/>
+    <owl:OnProperty rdf:resource="http://edu.stevens.cs548/clinic#/InverseOfReceivedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/InverseOfReceivedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://edu.stevens.cs548/clinic#/ReceivedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/Ted">
+    <rdf:type rdf:resource="http://edu.stevens.cs548/clinic#/Radiologists"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/Mitul">
+    <rdf:type rdf:resource="http://edu.stevens.cs548/clinic#/RadiologyPatient"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub484bL36C25">
+    <owl:HasValue rdf:resource="http://edu.stevens.cs548/clinic#/Radiologists"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:OnProperty rdf:resource="http://edu.stevens.cs548/clinic#/ProvidedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/Radiologists">
+    <rdf:type rdf:resource="http://edu.stevens.cs548/clinic#/Provider"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/ReceivedBy">
+    <rdfs:range rdf:resource="http://edu.stevens.cs548/clinic#/Patient"/>
+    <rdfs:domain rdf:resource="http://edu.stevens.cs548/clinic#/Treatment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/Treatment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Clinic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/Internists">
+    <rdf:type rdf:resource="http://edu.stevens.cs548/clinic#/Provider"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/Radiology">
+    <rdfs:subClassOf rdf:resource="http://edu.stevens.cs548/clinic#/Treatment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/John">
+    <rdf:type rdf:resource="http://edu.stevens.cs548/clinic#/RadiologyPatient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/DrugTreatment">
+    <rdfs:subClassOf rdf:resource="http://edu.stevens.cs548/clinic#/Treatment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/Rohan">
+    <rdf:type rdf:resource="http://edu.stevens.cs548/clinic#/Radiologists"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/RadiologyTreatment_Second_Treatment">
+    <rdf:type rdf:resource="http://edu.stevens.cs548/clinic#/Radiology"/>
+    <clinic:ProvidedBy rdf:resource="http://edu.stevens.cs548/clinic#/rohan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/RadiologyTreatment_Third_Treatment">
+    <clinic:ReceivedBy rdf:resource="http://edu.stevens.cs548/clinic#/ted"/>
+    <rdf:type rdf:resource="http://edu.stevens.cs548/clinic#/Radiology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/PatientId">
+    <rdfs:domain rdf:resource="http://edu.stevens.cs548/clinic#/Patient"/>
+    <owl:equivalentClass rdf:nodeID="ub484bL30C25"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/Provider">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Clinic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/Robin">
+    <rdf:type rdf:resource="http://edu.stevens.cs548/clinic#/RadiologyPatient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/Surgeons">
+    <rdf:type rdf:resource="http://edu.stevens.cs548/clinic#/Provider"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edu.stevens.cs548/clinic#/Dilip">
+    <rdf:type rdf:resource="http://edu.stevens.cs548/clinic#/Radiologists"/>
+  </rdf:Description>
+</rdf:RDF>
+

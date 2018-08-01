@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    vc:minVersion="1.1" xmlns:cids="http://www.example.org/schemas/clinic/clinic_ids"
+    targetNamespace="http://www.example.org/schemas/clinic/treatment"
+    xmlns="http://www.example.org/schemas/clinic/treatment">
+
+    <xs:import namespace="http://www.example.org/schemas/clinic/clinic_ids"
+        schemaLocation="ClinicIds.xsd"/>
+    <xs:complexType name="SurgeryType">
+        <xs:sequence>
+            <xs:element name="date" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RadiologyType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="date" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DrugTreatmentType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="dosage" type="xs:float"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TreatmentType">
+        <xs:sequence>
+            <xs:element name="provider-id" type="cids:ProviderIdType"/>
+            <xs:element name="diagnosis" type="xs:string"/>
+            <xs:choice>
+                <xs:element name="drug-treatment" type="DrugTreatmentType"/>
+                <xs:element name="radiology" type="RadiologyType"/>
+                <xs:element name="surgery" type="SurgeryType"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	targetNamespace="http://www.example.org/schemas/clinic/Patient"
+	elementFormDefault="qualified"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:pref="http://www.example.org/ClinicIds"
+	xmlns:cids="http://www.example.org/schemas/clinic/clinic_ids"
+	xmlns:trmt="http://www.example.org/schemas/clinic/treatment"
+	xmlns:Q1="http://www.example.org/schemas/clinic/Patient">
+
+	<xsd:import schemaLocation="Treatment.xsd"
+		namespace="http://www.example.org/schemas/clinic/treatment">
+	</xsd:import>
+	<xsd:import schemaLocation="ClinicIds.xsd" namespace="http://www.example.org/schemas/clinic/clinic_ids"></xsd:import>
+	<xsd:complexType name="PatientType">
+		<xsd:sequence>
+			<xsd:element name="treatments">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="treatment"
+							type="trmt:TreatmentType" minOccurs="0" maxOccurs="unbounded">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="patient-id" type="cids:PatientIdType"></xsd:element>
+			<xsd:element name="name" type="xsd:string"></xsd:element>
+			<xsd:element name="dob" type="xsd:date"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="Patient" type="Q1:PatientType"></xsd:element>
+</xsd:schema>

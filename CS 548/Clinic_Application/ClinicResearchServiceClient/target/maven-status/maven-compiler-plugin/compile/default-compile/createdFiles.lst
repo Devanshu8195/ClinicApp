@@ -1,0 +1,7 @@
+edu\stevens\cs548\clinic\billing\service\IResearchServiceRemote.class
+edu\stevens\cs548\clinic\billing\service\IResearchService$DrugTreatmentDTO.class
+edu\stevens\cs548\clinic\billing\service\IResearchService.class
+edu\stevens\cs548\clinic\billing\service\messages\Messages.class
+edu\stevens\cs548\clinic\billing\service\IResearchService$ResearchServiceExn.class
+edu\stevens\cs548\clinic\billing\service\IResearchServiceLocal.class
+edu\stevens\cs548\clinic\billing\service\ClinicResearch.class

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clin:Clinic xmlns:cids="http://www.example.com/schemas/clinic/clinic_ids"
+    xmlns:pat="http://www.example.org/schemas/clinic/patient"
+    xmlns:prov="http://www.example.org/schemas/clinic/provider"
+    xmlns:trmt="http://www.example.org/schemas/clinic/treatment"
+    xmlns:clin="http://www.example.org/schemas/clinic"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.example.org/schemas/clinic Clinic.xsd">
+
+    <pat:patient>
+        <pat:patient-id>956238</pat:patient-id>
+        <pat:name>Elon Musk</pat:name>
+        <pat:dob>1964-09-11</pat:dob>
+        <pat:treatments>
+            <pat:treatment>
+                <trmt:provider-id>357535</trmt:provider-id>
+                <trmt:diagnosis>hiv/aids</trmt:diagnosis>
+                <trmt:drug-treatment>
+                    <trmt:name>art</trmt:name>
+                    <trmt:dosage>78.0</trmt:dosage>
+                </trmt:drug-treatment>
+            </pat:treatment>
+        </pat:treatments>
+    </pat:patient>
+
+    <pat:patient>
+        <pat:patient-id>365894</pat:patient-id>
+        <pat:name>Mark Zukerberg</pat:name>
+        <pat:dob>1983-06-05</pat:dob>
+        <pat:treatments>
+            <pat:treatment>
+                <trmt:provider-id>456546</trmt:provider-id>
+                <trmt:diagnosis>migraine</trmt:diagnosis>
+                <trmt:drug-treatment>
+                    <trmt:name>relpax</trmt:name>
+                    <trmt:dosage>35.0</trmt:dosage>
+                </trmt:drug-treatment>
+            </pat:treatment>
+            <pat:treatment>
+                <trmt:provider-id>103020</trmt:provider-id>
+                <trmt:diagnosis>cancer</trmt:diagnosis>
+                <trmt:radiology>
+                    <trmt:date>2016-04-03</trmt:date>
+                    <trmt:date>2016-06-07</trmt:date>
+                    <trmt:date>2016-09-08</trmt:date>
+                </trmt:radiology>
+            </pat:treatment>
+
+        </pat:treatments>
+    </pat:patient>
+
+    <pat:patient>
+        <pat:patient-id>748596</pat:patient-id>
+        <pat:name>Bill Gates</pat:name>
+        <pat:dob>1973-10-10</pat:dob>
+        <pat:treatments>
+            <pat:treatment>
+                <trmt:provider-id>456546</trmt:provider-id>
+                <trmt:diagnosis>migraine</trmt:diagnosis>
+                <trmt:drug-treatment>
+                    <trmt:name>relpax</trmt:name>
+                    <trmt:dosage>15.0</trmt:dosage>
+                </trmt:drug-treatment>
+            </pat:treatment>
+            <pat:treatment>
+                <trmt:provider-id>103020</trmt:provider-id>
+                <trmt:diagnosis>Aplastic-Animiya</trmt:diagnosis>
+                <trmt:drug-treatment>
+                    <trmt:name>AntiFloxasin</trmt:name>
+                    <trmt:dosage>99.0</trmt:dosage>
+                </trmt:drug-treatment>
+            </pat:treatment>
+        </pat:treatments>
+    </pat:patient>
+
+    <pat:patient>
+        <pat:patient-id>352416</pat:patient-id>
+        <pat:name>Larry Page</pat:name>
+        <pat:dob>1999-02-06</pat:dob>
+        <pat:treatments>
+            <pat:treatment>
+                <trmt:provider-id>357535</trmt:provider-id>
+                <trmt:diagnosis>appendicitis</trmt:diagnosis>
+                <trmt:surgery>
+                    <trmt:date>2016-06-15</trmt:date>
+                </trmt:surgery>
+            </pat:treatment>
+        </pat:treatments>
+    </pat:patient>
+
+    <prov:provider>
+        <prov:provider-id>357535</prov:provider-id>
+        <prov:name>Rahul Durrani</prov:name>
+        <prov:specialization>Surgery</prov:specialization>
+    </prov:provider>
+    <prov:provider>
+        <prov:provider-id>456546</prov:provider-id>
+        <prov:name>Amruta Hanchate</prov:name>
+        <prov:specialization>Internist</prov:specialization>
+    </prov:provider>
+    <prov:provider>
+        <prov:provider-id>103020</prov:provider-id>
+        <prov:name>Shristi Hingle</prov:name>
+        <prov:specialization>Radiology</prov:specialization>
+    </prov:provider>
+</clin:Clinic>

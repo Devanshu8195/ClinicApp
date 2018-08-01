@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:trmt="www.example.com/schemas2/clinic/treatment"
+    targetNamespace="www.example.com/schemas2/clinic/treatment" elementFormDefault="qualified"
+    xmlns:cids="www.example.com/schemas2/clinic/clinicIds">
+
+    <xs:import namespace="www.example.com/schemas2/clinic/clinicIds" schemaLocation="clinicIds.xsd"/>
+    <xs:element name="treatmentType">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element maxOccurs="unbounded" minOccurs="1" name="content"
+                    type="trmt:contentType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="contentType">
+        <xs:sequence>
+            <xs:element name="providerId" type="cids:providerIdType"/>
+            <xs:element name="diagnosis" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="drugTreatment">
+        <xs:complexContent>
+            <xs:extension base="trmt:contentType">
+                <xs:sequence>
+
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="dosage" type="xs:float"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="radiology">
+        <xs:complexContent>
+            <xs:extension base="trmt:contentType">
+                <xs:sequence>
+
+                    <xs:element maxOccurs="unbounded" minOccurs="1" name="date" type="xs:date"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="surgery">
+        <xs:complexContent>
+            <xs:extension base="trmt:contentType">
+                <xs:sequence>
+
+                    <xs:element name="date" type="xs:date"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

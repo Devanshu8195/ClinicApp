@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Clinic xmlns:Q1="http://www.example.org/schemas/clinic/Patient" xmlns:cids="http://www.example.org/schemas/clinic/clinic_ids" xmlns:tns="http://www.example.org/schemas/clinic" xmlns:tns1="http://www.example.org/schemas/clinic/Provider" xmlns:trmt="http://www.example.org/schemas/clinic/treatment" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/schemas/clinic clinic.xsd ">
+  <Q1:Patient>
+    <Q1:treatments>radiology</Q1:treatments>
+    <Q1:patient-id>123456</Q1:patient-id>
+    <Q1:name>Alice Snow</Q1:name>
+    <Q1:dob>2001-01-01</Q1:dob>
+  </Q1:Patient>
+  <tns1:Provider>
+    <tns1:provider-id>234567</tns1:provider-id>
+    <tns1:name>Jon Snow</tns1:name>
+    <tns1:specialization>Radiology</tns1:specialization>
+  </tns1:Provider>
+</tns:Clinic>

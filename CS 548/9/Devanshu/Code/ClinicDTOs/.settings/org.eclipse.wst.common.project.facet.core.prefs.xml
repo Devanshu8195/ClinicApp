@@ -1,0 +1,7 @@
+<root>
+  <facet id="jpt.jaxb">
+    <node name="classgen">
+      <attribute name="package" value="edu.stevens.cs548.clinic.service.dto.treatment"/>
+    </node>
+  </facet>
+</root>

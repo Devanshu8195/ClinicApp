@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="18.0">
+    <meta>
+        <filters directoryPatterns="" filePatterns="clinicSchema.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="clinicSchema.xpr">
+        <folder path="."/>
+        <file name="clinic.xsd"/>
+        <file name="clinicids.xsd"/>
+        <file name="patient.xsd"/>
+        <file name="provider.xsd"/>
+        <file name="treatment.xsd"/>
+    </projectTree>
+</project>

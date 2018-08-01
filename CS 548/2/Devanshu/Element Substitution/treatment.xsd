@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="www.example.com/schemas1/clinic/treatments"
+    targetNamespace="www.example.com/schemas1/clinic/treatments" elementFormDefault="qualified"
+    xmlns:cids="www.example.com/schemas1/clinic/clinicids">
+
+    <xs:import namespace="www.example.com/schemas1/clinic/clinicids" schemaLocation="clinicIds.xsd"/>
+    <xs:complexType name="treatmentType">
+        <xs:sequence>
+            <xs:element name="providerId" type="cids:providerIdType"/>
+            <xs:element name="diagnosis" type="xs:string"/>
+            <xs:element ref="treatmentSubType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element abstract="true" name="treatmentSubType"/>
+    <xs:element name="drugTreatment" substitutionGroup="treatmentSubType" type="drugTreatmentType"/>
+    <xs:element name="radiology" substitutionGroup="treatmentSubType" type="radiologyType"/>
+    <xs:element name="surgery" substitutionGroup="treatmentSubType" type="surgeryType"/>
+    <xs:complexType name="drugTreatmentType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="dosage" type="xs:float"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="radiologyType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="1" name="date" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="surgeryType">
+        <xs:sequence>
+            <xs:element name="date" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

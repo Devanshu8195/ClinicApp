@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Sat Dec 30 2017 11:29:18 GMT-0500 (Eastern Standard Time) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="ENVELOPE">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="HEADER">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="TALLYREQUEST" type="xs:string"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="BODY">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="IMPORTDATA">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="REQUESTDESC">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="REPORTNAME" type="xs:string"></xs:element>
+                                                                                 <xs:element name="STATICVARIABLES">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="SVCURRENTCOMPANY" type="xs:string"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="REQUESTDATA">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="TALLYMESSAGE" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="VOUCHER">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="OLDAUDITENTRYIDS.LIST">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="OLDAUDITENTRYIDS" type="xs:int"></xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                                 <xs:attribute name="TYPE" type="xs:string"></xs:attribute>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                                     <xs:element name="DATE" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="GUID" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="PRICELEVEL" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="CLASSNAME" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="VOUCHERTYPENAME" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="VOUCHERNUMBER" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="PARTYLEDGERNAME" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="CSTFORMISSUETYPE"></xs:element>
+                                                                                                                     <xs:element name="CSTFORMRECVTYPE"></xs:element>
+                                                                                                                     <xs:element name="FBTPAYMENTTYPE" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="PERSISTEDVIEW" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="VCHGSTCLASS"></xs:element>
+                                                                                                                     <xs:element name="DIFFACTUALQTY" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISMSTFROMSYNC" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ASORIGINAL" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="AUDITED" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="FORJOBCOSTING" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISOPTIONAL" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="EFFECTIVEDATE" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="USEFOREXCISE" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISFORJOBWORKIN" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ALLOWCONSUMPTION" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="USEFORINTEREST" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="USEFORGAINLOSS" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="USEFORGODOWNTRANSFER" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="USEFORCOMPOUND" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="USEFORSERVICETAX" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISEXCISEVOUCHER" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="EXCISETAXOVERRIDE" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="USEFORTAXUNITTRANSFER" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="EXCISEOPENING" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="USEFORFINALPRODUCTION" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISTDSOVERRIDDEN" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISTCSOVERRIDDEN" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISTDSTCSCASHVCH" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="INCLUDEADVPYMTVCH" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISSUBWORKSCONTRACT" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISVATOVERRIDDEN" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="IGNOREORIGVCHDATE" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISSERVICETAXOVERRIDDEN" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISISDVOUCHER" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISEXCISEOVERRIDDEN" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISEXCISESUPPLYVCH" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISGSTOVERRIDDEN" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="GSTNOTEXPORTED" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISVATPRINCIPALACCOUNT" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISBOENOTAPPLICABLE" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISSHIPPINGWITHINSTATE" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISOVERSEASTOURISTTRANS" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISCANCELLED" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="HASCASHFLOW" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISPOSTDATED" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="USETRACKINGNUMBER" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISINVOICE" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="MFGJOURNAL" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="HASDISCOUNTS" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ASPAYSLIP" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISCOSTCENTRE" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISSTXNONREALIZEDVCH" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISEXCISEMANUFACTURERON" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISBLANKCHEQUE" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISVOID" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISONHOLD" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ORDERLINESTATUS" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="VATISAGNSTCANCSALES" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="VATISPURCEXEMPTED" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISVATRESTAXINVOICE" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="VATISASSESABLECALCVCH" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISVATDUTYPAID" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISDELIVERYSAMEASCONSIGNEE" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISDISPATCHSAMEASCONSIGNOR" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ISDELETED" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="CHANGEVCHMODE" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ALTERID" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="MASTERID" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="VOUCHERKEY" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="EXCLUDEDTAXATIONS.LIST"></xs:element>
+                                                                                                                     <xs:element name="OLDAUDITENTRIES.LIST"></xs:element>
+                                                                                                                     <xs:element name="ACCOUNTAUDITENTRIES.LIST"></xs:element>
+                                                                                                                     <xs:element name="AUDITENTRIES.LIST"></xs:element>
+                                                                                                                     <xs:element name="DUTYHEADDETAILS.LIST"></xs:element>
+                                                                                                                     <xs:element name="SUPPLEMENTARYDUTYHEADDETAILS.LIST"></xs:element>
+                                                                                                                     <xs:element name="INVOICEDELNOTES.LIST"></xs:element>
+                                                                                                                     <xs:element name="INVOICEORDERLIST.LIST"></xs:element>
+                                                                                                                     <xs:element name="INVOICEINDENTLIST.LIST"></xs:element>
+                                                                                                                     <xs:element name="ATTENDANCEENTRIES.LIST"></xs:element>
+                                                                                                                     <xs:element name="ORIGINVOICEDETAILS.LIST"></xs:element>
+                                                                                                                     <xs:element name="INVOICEEXPORTLIST.LIST"></xs:element>
+                                                                                                                     <xs:element name="LEDGERENTRIES.LIST" maxOccurs="unbounded">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="OLDAUDITENTRYIDS.LIST">
+                                                                                                                                             <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                         <xs:element name="OLDAUDITENTRYIDS" type="xs:int"></xs:element>
+                                                                                                                                                   </xs:sequence>
+                                                                                                                                                   <xs:attribute name="TYPE" type="xs:string"></xs:attribute>
+                                                                                                                                             </xs:complexType>
+                                                                                                                                       </xs:element>
+                                                                                                                                       <xs:element name="LEDGERNAME" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="GSTCLASS"></xs:element>
+                                                                                                                                       <xs:element name="ISDEEMEDPOSITIVE" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="LEDGERFROMITEM" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="REMOVEZEROENTRIES" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="ISPARTYLEDGER" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="ISLASTDEEMEDPOSITIVE" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="ISCAPVATTAXALTERED" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="AMOUNT" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="SERVICETAXDETAILS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="BANKALLOCATIONS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="BILLALLOCATIONS.LIST">
+                                                                                                                                             <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                         <xs:element name="NAME" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="BILLTYPE" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="TDSDEDUCTEEISSPECIALRATE" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="AMOUNT" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="INTERESTCOLLECTION.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="STBILLCATEGORIES.LIST"></xs:element>
+                                                                                                                                                   </xs:sequence>
+                                                                                                                                             </xs:complexType>
+                                                                                                                                       </xs:element>
+                                                                                                                                       <xs:element name="INTERESTCOLLECTION.LIST"></xs:element>
+                                                                                                                                       <xs:element name="OLDAUDITENTRIES.LIST"></xs:element>
+                                                                                                                                       <xs:element name="ACCOUNTAUDITENTRIES.LIST"></xs:element>
+                                                                                                                                       <xs:element name="AUDITENTRIES.LIST"></xs:element>
+                                                                                                                                       <xs:element name="INPUTCRALLOCS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="DUTYHEADDETAILS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="EXCISEDUTYHEADDETAILS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="RATEDETAILS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="SUMMARYALLOCS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="STPYMTDETAILS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="EXCISEPAYMENTALLOCATIONS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="TAXBILLALLOCATIONS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="TAXOBJECTALLOCATIONS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="TDSEXPENSEALLOCATIONS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="VATSTATUTORYDETAILS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="COSTTRACKALLOCATIONS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="REFVOUCHERDETAILS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="INVOICEWISEDETAILS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="VATITCDETAILS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="ADVANCETAXDETAILS.LIST"></xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                                     <xs:element name="ALLINVENTORYENTRIES.LIST" maxOccurs="unbounded">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="STOCKITEMNAME" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="ISDEEMEDPOSITIVE" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="ISLASTDEEMEDPOSITIVE" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="ISAUTONEGATE" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="ISCUSTOMSCLEARANCE" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="ISTRACKCOMPONENT" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="ISTRACKPRODUCTION" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="ISPRIMARYITEM" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="ISSCRAP" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="RATE" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="DISCOUNT" type="xs:double"></xs:element>
+                                                                                                                                       <xs:element name="AMOUNT" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="ACTUALQTY" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="BILLEDQTY" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="INCLVATRATE" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="BATCHALLOCATIONS.LIST">
+                                                                                                                                             <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                         <xs:element name="GODOWNNAME" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="BATCHNAME" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="INDENTNO"></xs:element>
+                                                                                                                                                         <xs:element name="ORDERNO"></xs:element>
+                                                                                                                                                         <xs:element name="TRACKINGNUMBER"></xs:element>
+                                                                                                                                                         <xs:element name="DYNAMICCSTISCLEARED" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="AMOUNT" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="ACTUALQTY" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="BILLEDQTY" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="ADDITIONALDETAILS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="VOUCHERCOMPONENTLIST.LIST"></xs:element>
+                                                                                                                                                   </xs:sequence>
+                                                                                                                                             </xs:complexType>
+                                                                                                                                       </xs:element>
+                                                                                                                                       <xs:element name="ACCOUNTINGALLOCATIONS.LIST">
+                                                                                                                                             <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                         <xs:element name="OLDAUDITENTRYIDS.LIST">
+                                                                                                                                                               <xs:complexType>
+                                                                                                                                                                     <xs:sequence>
+                                                                                                                                                                           <xs:element name="OLDAUDITENTRYIDS" type="xs:int"></xs:element>
+                                                                                                                                                                     </xs:sequence>
+                                                                                                                                                                     <xs:attribute name="TYPE" type="xs:string"></xs:attribute>
+                                                                                                                                                               </xs:complexType>
+                                                                                                                                                         </xs:element>
+                                                                                                                                                         <xs:element name="LEDGERNAME" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="CLASSRATE" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="GSTCLASS"></xs:element>
+                                                                                                                                                         <xs:element name="ISDEEMEDPOSITIVE" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="LEDGERFROMITEM" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="REMOVEZEROENTRIES" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="ISPARTYLEDGER" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="ISLASTDEEMEDPOSITIVE" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="ISCAPVATTAXALTERED" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="AMOUNT" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="SERVICETAXDETAILS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="BANKALLOCATIONS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="BILLALLOCATIONS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="INTERESTCOLLECTION.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="OLDAUDITENTRIES.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="ACCOUNTAUDITENTRIES.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="AUDITENTRIES.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="INPUTCRALLOCS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="DUTYHEADDETAILS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="EXCISEDUTYHEADDETAILS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="RATEDETAILS.LIST" maxOccurs="unbounded">
+                                                                                                                                                               <xs:complexType>
+                                                                                                                                                                     <xs:sequence>
+                                                                                                                                                                           <xs:element name="GSTRATEDUTYHEAD" type="xs:string"></xs:element>
+                                                                                                                                                                           <xs:element name="GSTRATEVALUATIONTYPE" type="xs:string"></xs:element>
+                                                                                                                                                                     </xs:sequence>
+                                                                                                                                                               </xs:complexType>
+                                                                                                                                                         </xs:element>
+                                                                                                                                                         <xs:element name="SUMMARYALLOCS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="STPYMTDETAILS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="EXCISEPAYMENTALLOCATIONS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="TAXBILLALLOCATIONS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="TAXOBJECTALLOCATIONS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="TDSEXPENSEALLOCATIONS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="VATSTATUTORYDETAILS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="COSTTRACKALLOCATIONS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="REFVOUCHERDETAILS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="INVOICEWISEDETAILS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="VATITCDETAILS.LIST"></xs:element>
+                                                                                                                                                         <xs:element name="ADVANCETAXDETAILS.LIST"></xs:element>
+                                                                                                                                                   </xs:sequence>
+                                                                                                                                             </xs:complexType>
+                                                                                                                                       </xs:element>
+                                                                                                                                       <xs:element name="DUTYHEADDETAILS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="SUPPLEMENTARYDUTYHEADDETAILS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="TAXOBJECTALLOCATIONS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="REFVOUCHERDETAILS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="EXCISEALLOCATIONS.LIST"></xs:element>
+                                                                                                                                       <xs:element name="EXPENSEALLOCATIONS.LIST"></xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                                     <xs:element name="PAYROLLMODEOFPAYMENT.LIST"></xs:element>
+                                                                                                                     <xs:element name="ATTDRECORDS.LIST"></xs:element>
+                                                                                                                     <xs:element name="TEMPGSTRATEDETAILS.LIST"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                               <xs:attribute name="REMOTEID" type="xs:string"></xs:attribute>
+                                                                                                               <xs:attribute name="VCHKEY" type="xs:string"></xs:attribute>
+                                                                                                               <xs:attribute name="VCHTYPE" type="xs:string"></xs:attribute>
+                                                                                                               <xs:attribute name="ACTION" type="xs:string"></xs:attribute>
+                                                                                                               <xs:attribute name="OBJVIEW" type="xs:string"></xs:attribute>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>

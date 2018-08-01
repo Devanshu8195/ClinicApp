@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:pat="www.example.com/schemas2/clinic/patient"
+    targetNamespace="www.example.com/schemas2/clinic/patient" elementFormDefault="qualified"
+    xmlns:cids="www.example.com/schemas2/clinic/clinicIds"
+    xmlns:trmt="www.example.com/schemas2/clinic/treatment" id="pat">
+
+    <xs:import namespace="www.example.com/schemas2/clinic/treatment" schemaLocation="Treatment.xsd"
+        id="trmt"/>
+    <xs:import namespace="www.example.com/schemas2/clinic/clinicIds" schemaLocation="clinicIds.xsd"/>
+    <xs:complexType name="patientType">
+        <xs:sequence>
+            <xs:element name="patientId" type="cids:patientIdType"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="dob" type="xs:date"/>
+            <xs:element name="treatments">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="treatment"
+                            type="trmt:contentType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="patient" type="pat:patientType"/>
+</xs:schema>

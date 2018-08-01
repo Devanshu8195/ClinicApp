@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    vc:minVersion="1.1" targetNamespace="http://www.example.org/schemas/clinic/patient"
+    xmlns="http://www.example.org/schemas/clinic/patient"
+    xmlns:cids="http://www.example.org/schemas/clinic/clinic_ids"
+    xmlns:trmt="http://www.example.org/schemas/clinic/treatment">
+
+    <xs:import namespace="http://www.example.org/schemas/clinic/treatment"
+        schemaLocation="Treatment.xsd"/>
+    <xs:import namespace="http://www.example.org/schemas/clinic/clinic_ids"
+        schemaLocation="ClinicIds.xsd"/>
+
+    <xs:complexType name="PatientType">
+        <xs:sequence>
+            <xs:element name="patient-id" type="cids:PatientIdType"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="dob" type="xs:date"/>
+            <xs:element name="treatments">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="treatment"
+                            type="trmt:TreatmentType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="patient" type="PatientType"/>
+
+</xs:schema>
